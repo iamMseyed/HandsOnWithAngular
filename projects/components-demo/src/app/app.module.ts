@@ -3,7 +3,8 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { StudentComponent } from './components/studentComponent.components';
-import { EmployeeComponent } from './components/EmployeeComponent.components';
+import { EmployeeComponent } from './components/employeeComponent.components';
+import { ISPComponent } from './components/outsideComponents/isp.component';
 
 
 @NgModule({
@@ -11,12 +12,13 @@ import { EmployeeComponent } from './components/EmployeeComponent.components';
   //register components here
     AppComponent, //default
     StudentComponent,
-    EmployeeComponent
+    EmployeeComponent,
+    ISPComponent
   ],
   imports: [
     BrowserModule
   ],
   providers: [],
-  bootstrap:[StudentComponent,EmployeeComponent] //bootstrap to initilize the component
+  bootstrap:[StudentComponent,EmployeeComponent,ISPComponent] //bootstrap to initilize the component
 })
 export class AppModule { }
