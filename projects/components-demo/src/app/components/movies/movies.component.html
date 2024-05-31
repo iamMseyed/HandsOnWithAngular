@@ -1,0 +1,36 @@
+<div class="container-fluid">
+    <h1>Movie Information</h1>
+    <hr>    
+    <dl>
+        <dt>Movie Id</dt>
+        <!-- Data binding with interoplation syntax -> {{}}-->
+        <dd>{{movie.movieId}}</dd>  <!-- direct value binding, ok for direct data properties-->
+
+        <dt>Movie Name</dt>
+        <dd>{{movie.movieName}}</dd>
+
+        <dt>Movie Rating</dt>
+        <dd>{{movie.movieRating}}</dd>
+
+        <dt>Release Year</dt>
+        <dd>{{movie.releaseYear}}</dd>
+
+        <dt>Availiblity</dt>
+        <dd>
+            <span> Via intropolation: </span><input type="checkbox" checked="{{movie.isAvailable}}" disabled> <!-- via intropolation syntax {{}}-->
+            <br>
+            <!-- not recommended on html properties (attributes) -->
+            <span> Via Property binding: </span><input type="checkbox" [checked]="movie.isAvailable" disabled> <!-- via property binding [] -->
+        </dd>
+
+        <dt>Banner</dt>
+        <dd>
+            <span class="m-4">Via interpolation:</span>
+            <img src="{{movie.movieThumbnail}}" alt="movie thumbnail">
+            <br>
+            <span class="m-4">Via property binding:</span>
+            <img [src]="movie.movieThumbnail" alt="movie thumbnail">
+            <!-- sometimes working somtimes not, so prefered property binding if it supports -->
+        </dd>
+    </dl>
+</div>

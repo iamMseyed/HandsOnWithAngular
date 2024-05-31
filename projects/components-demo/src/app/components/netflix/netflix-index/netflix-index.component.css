@@ -1,0 +1,10 @@
+#background{
+    background-image: url("../../../../assets/netflixBG.jpg");
+    height: 720px;
+    background-image:linear-gradient(to top, rgba(0, 0, 0, 0.8) 0, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0.8) 100%)
+}
+#box{
+    margin: 30px;
+    background-color: rgb(0,0,0.0.5);
+    height: 720px;
+}
