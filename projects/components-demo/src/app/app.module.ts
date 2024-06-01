@@ -10,6 +10,9 @@ import { NetflixMainComponent } from './components/netflix/netflix-main/netflix-
 import { NetflixRegisterComponent } from './components/netflix/netflix-register/netflix-register.component';
 import { NetflixIndexComponent } from './components/netflix/netflix-index/netflix-index.component';
 import { MovieComponent } from './components/movies/movies.component';
+import { EvenBindingComponent } from './components/even-binding/even-binding.component';
+import { TwoWayBindingComponent } from './components/two-way-binding/two-way-binding.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -24,13 +27,16 @@ import { MovieComponent } from './components/movies/movies.component';
     NetflixHeaderComponent,
     NetflixMainComponent,
     NetflixRegisterComponent,
-    MovieComponent
+    MovieComponent,
+    EvenBindingComponent,
+    TwoWayBindingComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [],
-  // bootstrap:[StudentComponent,EmployeeComponent,ISPComponent] //bootstrap to initilize the component
-  bootstrap:[MovieComponent]
+  // bootstrap:[StudentComponent,EmployeeComponent,ISPComponent,MovieComponent,EvenBindingComponent] //bootstrap to initilize the component
+  bootstrap:[TwoWayBindingComponent]
 })
 export class AppModule { }

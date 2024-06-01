@@ -1,0 +1,25 @@
+<div class="container-fluid">
+    <h2 class="text-center">Stock Information</h2>
+    <hr>
+    <div>
+        Prod Name : {{prodName}}<br>
+        City: {{city}}<br>
+        Stock Availability : {{stock==true ? "Available":"Out of Stock"}}<br>
+    </div>
+
+    <div>
+        <h3>Form</h3>
+         Enter Prod Name: <input type="text" [(ngModel)]="prodName">  <br>
+         Is Stock Availabel: <input type="checkbox" [(ngModel)]="stock">  <br>
+         Select City Name:
+         <select [(ngModel)]="city">
+            <option>BLR</option>
+            <option>HYD</option>
+         </select>
+
+        <!--
+            ngModel needs to be imported in app.modules.ts file, and its value here prodName
+            should be mentioned in projects ....components.ts file
+        -->
+    </div>
+</div>
