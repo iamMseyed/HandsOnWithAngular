@@ -5,6 +5,7 @@ import { Component } from '@angular/core';
   templateUrl: './student-grade.component.html',
   styleUrls: ['./student-grade.component.css']
 })
+
 export class StudentGradeComponent {
   studentID:string='ABC123';
   studentName:string='AnyName';
@@ -24,16 +25,23 @@ export class StudentGradeComponent {
   }
 
   public calculatMarks(sub1Marks:number,sub2Marks:number,sub3Marks:number):number{
+    if((sub1Marks>100 || sub2Marks>100 || sub3Marks>100))
+      return 0;
+    else if((sub1Marks<35 || sub2Marks<35 || sub3Marks<35))
+      return 0;
+    else
       return sub1Marks+sub2Marks+sub3Marks;
   }
+
   public calculatePercentage(totalMarks:number):number{
     return totalMarks/3;
   }
+
   public calculatGrade(percentage:number,sub1Marks:number,sub2Marks:number,sub3Marks:number):string{
-      if((sub1Marks<35 || sub2Marks<35 || sub3Marks<35))
-        return "Fail in a subject or more!";
-      else if((sub1Marks>100 || sub2Marks>100 || sub3Marks>100))
+      if((sub1Marks>100 || sub2Marks>100 || sub3Marks>100))
         return "Marks can't be more than 100"
+      else if((sub1Marks<35 || sub2Marks<35 || sub3Marks<35))
+        return "Fail in a subject or more!";
       else if(percentage<35)
         return "Fail";
       else if(percentage>=35 && percentage<50)
@@ -45,4 +53,5 @@ export class StudentGradeComponent {
       else 
         return "A+";
   }
+
 }
