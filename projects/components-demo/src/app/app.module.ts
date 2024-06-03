@@ -14,6 +14,7 @@ import { EvenBindingComponent } from './components/even-binding/even-binding.com
 import { TwoWayBindingComponent } from './components/two-way-binding/two-way-binding.component';
 import { FormsModule } from '@angular/forms';
 import { StudentGradeComponent } from './components/student-grade/student-grade.component';
+import { FormDataComponent } from './components/form-data/form-data.component';
 
 
 @NgModule({
@@ -31,7 +32,8 @@ import { StudentGradeComponent } from './components/student-grade/student-grade.
     MovieComponent,
     EvenBindingComponent,
     TwoWayBindingComponent,
-    StudentGradeComponent
+    StudentGradeComponent,
+    FormDataComponent
   ],
   imports: [
     BrowserModule,

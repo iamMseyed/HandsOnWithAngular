@@ -1,5 +1,6 @@
 <div class="container-fluid">
     <div class="text-center">
+        <h3>Student details</h3>
         <table class="table">
            <tr>
                 <th>Student Id</th>
@@ -31,10 +32,17 @@
             <label>Sub marks 1: &nbsp;<input type="number" [(ngModel)]="sub1Marks"></label>
             <label>Sub marks 2: &nbsp;<input type="number" [(ngModel)]="sub2Marks"></label>
             <label>Sub marks 3: &nbsp;<input type="number" [(ngModel)]="sub3Marks"></label>
-            <label>Total Marks: &nbsp;<input type="number" [(ngModel)]="totalMarks"></label>
-            <label>Percentage: &nbsp;<input type="number" [(ngModel)]="percentage"></label>
-            <label>Grade: &nbsp;<input type="string" [(ngModel)]="grade"></label>
-            <button (click)="generate()"> Generate </button>
+
+            <hr>
+
+           <form (click)="generate()">
+                <label>Total Marks: &nbsp;<input type="number" value={{totalMarks}} placeholder="hello"></label>
+                <label>Percentage: &nbsp;<input type="number" value={{percentage}}></label>
+                <label>Grade: &nbsp;<textarea rows=1 cols="50" value={{grade}}></textarea></label>
+                <button class="btn btn-dark m-3">  Generate </button>
+           </form>
+            <!--if not within form  -->
+           <!-- <button class="btn btn-dark m-3" (click)="generate()">  Generate </button> -->
         </div>
             
     </div>

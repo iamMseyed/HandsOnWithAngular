@@ -11,14 +11,16 @@ export class StudentGradeComponent {
   sub1Marks:number=30;
   sub2Marks:number=40;
   sub3Marks:number=50; 
-  totalMarks:number=this.sub1Marks+this.sub2Marks+this.sub3Marks;
-  percentage:number=this.totalMarks/3;
-  grade:string=this.calculatGrade(this.percentage);
+  totalMarks:number=this.calculatMarks(this.sub1Marks,this.sub2Marks,this.sub3Marks);
+  per:number= this.calculatePercentage(this.totalMarks);
+  percentage=parseFloat(this.per.toFixed(1)) //upto 1 decimal 
+  grade:string=this.calculatGrade(this.percentage,this.sub1Marks,this.sub2Marks, this.sub3Marks);
 
   public generate(){
     this.totalMarks=this.totalMarks=this.calculatMarks(this.sub1Marks,this.sub2Marks,this.sub3Marks);
-    this.percentage=this.calculatePercentage(this.totalMarks);
-    this.grade=this.calculatGrade(this.percentage);
+    this.per=this.calculatePercentage(this.totalMarks);
+    this.percentage=parseFloat(this.per.toFixed(1));
+    this.grade=this.calculatGrade(this.percentage,this.sub1Marks, this.sub2Marks,this.sub3Marks);
   }
 
   public calculatMarks(sub1Marks:number,sub2Marks:number,sub3Marks:number):number{
@@ -27,8 +29,12 @@ export class StudentGradeComponent {
   public calculatePercentage(totalMarks:number):number{
     return totalMarks/3;
   }
-  public calculatGrade(percentage:number):string{
-      if(percentage<35)
+  public calculatGrade(percentage:number,sub1Marks:number,sub2Marks:number,sub3Marks:number):string{
+      if((sub1Marks<35 || sub2Marks<35 || sub3Marks<35))
+        return "Fail in a subject or more!";
+      else if((sub1Marks>100 || sub2Marks>100 || sub3Marks>100))
+        return "Marks can't be more than 100"
+      else if(percentage<35)
         return "Fail";
       else if(percentage>=35 && percentage<50)
         return "C";
@@ -39,5 +45,4 @@ export class StudentGradeComponent {
       else 
         return "A+";
   }
-
 }
