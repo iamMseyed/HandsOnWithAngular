@@ -1,0 +1,36 @@
+<div class="container-fluid text-center">
+    <h2>Product Details</h2>
+    <hr>
+    <dl>
+        <dt>Name</dt>
+        <dd>{{product.Name}}</dd>
+
+        <dt>Price</dt>
+        <dd>₹{{product.Price}}</dd>
+
+       
+        <!-- will print unsync data  -->
+        <!-- interpolation syntax binding, one way binding, won't display the image  --> 
+        <!-- <dt>Image <input type="checkbox"  id="" checked="{{preview}}">  -->
+
+        <!-- property binding, one way binding, will update checkbox only and not alter image data  -->
+        <dt>Image (via property binding)<input type="checkbox"  id="" [checked]="preview">
+        
+        <!-- 2 way binding, will display the image-->
+        <dt>Image(via 2-way binding) <input type="checkbox"  id="" [(ngModel)]="preview"> 
+             <!-- to show data   -->
+                <!-- {{preview==true?"Show":"Hide"}}</dt>    -->
+        </dt>
+        <dd *ngIf="preview">  <!--image code -->
+            <!-- <img src={{product.Image}} alt="">--> <!--string interpolation-->
+            <img [src]="product.Image" alt="product image" height="250px" width="500px " > <!-- property binding -->
+        </dd>
+    </dl>
+</div>
+<!-- 
+    [] denotes one-way data binding from the component to the template (property binding).
+    () denotes one-way data binding from the template to the component (event binding).
+    [()]= (also known as banana in the box or two-way binding syntax) combines both property and event bindings,
+        enabling two-way data binding between the component and the template
+
+ -->
