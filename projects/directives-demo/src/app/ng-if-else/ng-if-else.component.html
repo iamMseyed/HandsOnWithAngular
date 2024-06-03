@@ -1,0 +1,43 @@
+<div class="container-fluid">
+    <h3>Display Data</h3>
+    <hr>
+    <label for="">Switch between divs 
+        <input type="checkbox" name="" id="" [(ngModel)]="flag">
+    </label>
+
+    <ng-container *ngIf="flag;then templateOne; else templateTwo"></ng-container>
+        <ng-template  #templateOne>
+            <h3>Template One</h3>
+        </ng-template>
+
+        <ng-template #templateTwo>
+            <h3>Template Two</h3>
+        </ng-template >
+            
+
+    <hr>
+
+        <h2>Product Data</h2>
+        <hr>
+        <dl>
+            <!-- <input type="checkbox" name="" id="" [(ngModel)]="toogle"> -->
+            
+            <button class="btn btn-primary" (click)="toggleButton()">{{btnTxt}} </button>
+
+            <dt>Id</dt> <dd>{{product.productId}}</dd>
+
+            <dt>Name</dt> <dd>{{product.productName}}</dd>
+
+            <dt>Model</dt> <dd>{{product.productModel}}</dd>
+
+            <dt>Price</dt> <dd>{{product.productPrice}}</dd>
+        </dl>
+        <ng-container *ngIf="toogle; then description; else image"></ng-container> 
+            <ng-template #image>
+                <img [src]="product.Image" alt="" height="250px" width="500px">
+            </ng-template>
+
+            <ng-template #description>
+                <h4>{{product.productDescription}}</h4>
+           </ng-template>
+</div>

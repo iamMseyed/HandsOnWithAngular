@@ -4,18 +4,20 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { IfDemoComponent } from './if-demo/if-demo.component';
 import { FormsModule } from '@angular/forms';
+import { NgIfElseComponent } from './ng-if-else/ng-if-else.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    IfDemoComponent
+    IfDemoComponent,
+    NgIfElseComponent
   ],
   imports: [
     BrowserModule,
     FormsModule //for ng things
   ],
   providers: [],
-  // bootstrap: [AppComponent]
-  bootstrap:[IfDemoComponent]
+  // bootstrap: [AppComponent,IfDemoComponent]
+  bootstrap:[NgIfElseComponent]
 })
 export class AppModule { }
