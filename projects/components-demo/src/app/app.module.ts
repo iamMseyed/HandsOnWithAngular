@@ -13,6 +13,7 @@ import { MovieComponent } from './components/movies/movies.component';
 import { EvenBindingComponent } from './components/even-binding/even-binding.component';
 import { TwoWayBindingComponent } from './components/two-way-binding/two-way-binding.component';
 import { FormsModule } from '@angular/forms';
+import { StudentGradeComponent } from './components/student-grade/student-grade.component';
 
 
 @NgModule({
@@ -29,14 +30,15 @@ import { FormsModule } from '@angular/forms';
     NetflixRegisterComponent,
     MovieComponent,
     EvenBindingComponent,
-    TwoWayBindingComponent
+    TwoWayBindingComponent,
+    StudentGradeComponent
   ],
   imports: [
     BrowserModule,
     FormsModule
   ],
   providers: [],
-  // bootstrap:[StudentComponent,EmployeeComponent,ISPComponent,MovieComponent,EvenBindingComponent] //bootstrap to initilize the component
-  bootstrap:[TwoWayBindingComponent]
+  // bootstrap:[StudentComponent,EmployeeComponent,ISPComponent,MovieComponent,EvenBindingComponent,TwoWayBindingComponent] //bootstrap to initilize the component
+  bootstrap:[StudentGradeComponent]
 })
 export class AppModule { }

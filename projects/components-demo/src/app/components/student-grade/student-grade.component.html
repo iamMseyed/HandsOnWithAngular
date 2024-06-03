@@ -1,0 +1,41 @@
+<div class="container-fluid">
+    <div class="text-center">
+        <table class="table">
+           <tr>
+                <th>Student Id</th>
+                <th>Student Name</th>
+                <th>Sub Marks 1</th>
+                <th>Sub Marks 2</th>
+                <th>Sub Marks 3</th>
+                <th>Total Marks</th>
+                <th>Percentage</th>
+                <th>Grade</th>
+           </tr>
+
+            <tr>
+                <td>{{studentID}}</td>
+                <td>{{studentName}}</td>
+                <td>{{sub1Marks}}</td>
+                <td>{{sub2Marks}}</td>
+                <td>{{sub3Marks}}</td>
+                <td>{{totalMarks}}</td>
+                <td>{{percentage}}</td>
+                <td>{{grade}}</td>
+            </tr>
+
+        </table>
+
+        <div class="form-group">
+            <label>Student Id: &nbsp; <input type="text" [(ngModel)]="studentID"></label>
+            <label>Student Name: &nbsp;<input type="text" [(ngModel)]="studentName"></label>
+            <label>Sub marks 1: &nbsp;<input type="number" [(ngModel)]="sub1Marks"></label>
+            <label>Sub marks 2: &nbsp;<input type="number" [(ngModel)]="sub2Marks"></label>
+            <label>Sub marks 3: &nbsp;<input type="number" [(ngModel)]="sub3Marks"></label>
+            <label>Total Marks: &nbsp;<input type="number" [(ngModel)]="totalMarks"></label>
+            <label>Percentage: &nbsp;<input type="number" [(ngModel)]="percentage"></label>
+            <label>Grade: &nbsp;<input type="string" [(ngModel)]="grade"></label>
+            <button (click)="generate()"> Generate </button>
+        </div>
+            
+    </div>
+</div>
