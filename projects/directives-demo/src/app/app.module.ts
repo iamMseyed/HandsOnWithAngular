@@ -6,20 +6,22 @@ import { IfDemoComponent } from './if-demo/if-demo.component';
 import { FormsModule } from '@angular/forms';
 import { NgIfElseComponent } from './ng-if-else/ng-if-else.component';
 import { NgSwitchComponent } from './ng-switch/ng-switch.component';
+import { NgForComponent } from './ng-for/ng-for.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     IfDemoComponent,
     NgIfElseComponent,
-    NgSwitchComponent
+    NgSwitchComponent,
+    NgForComponent
   ],
   imports: [
     BrowserModule,
     FormsModule //for ng things
   ],
   providers: [],
-  // bootstrap: [AppComponent,IfDemoComponent,NgIfElseComponent]
-  bootstrap:[NgSwitchComponent]
+  // bootstrap: [AppComponent,IfDemoComponent,NgIfElseComponent,NgSwitchComponent]
+  bootstrap:[NgForComponent]
 })
 export class AppModule { }
