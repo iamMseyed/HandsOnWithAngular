@@ -1,0 +1,64 @@
+<div class="container-fluid">
+    <h3> Switch case</h3>
+    <hr>
+
+    <ng-container [ngSwitch]="str1">
+        <div *ngSwitchCase="'Case 1'">This is case 1</div>
+        <div *ngSwitchCase="'Case 2'">This is case 2</div>
+        <div *ngSwitchCase="'Case 3'">This is case 3</div>
+        <div *ngSwitchDefault>This is default Case!</div>
+    </ng-container>
+    <hr>
+    <h3>ngSwitch Directive</h3>
+
+    <div class="btn-toolbar mb-2">
+        <div class="btn-group">
+            <button class="btn btn-warning" name="price" (click)="ChangeTemplate($event)">Price</button> <!-- should be $event-->
+            <button class="btn btn-warning" name="preview" (click)="ChangeTemplate($event)">Preview</button>
+            <button class="btn btn-warning" name="rating" (click)="ChangeTemplate($event)">Rating</button>
+            <button class="btn btn-warning" name="description" (click)="ChangeTemplate($event)">Description</button>
+        </div>
+    </div>
+
+    <ng-container [ngSwitch]="template">
+        <div *ngSwitchCase=" 'price' " >
+            <dl>
+                <dt>Product Price</dt>
+                <dd>{{product.price}}</dd>
+            </dl>
+    
+        </div>
+        
+        <div *ngSwitchCase=" 'preview' " >
+            <dl>
+                <dt>Image</dt>
+                <dd> <img [src]="product.image" width="250px" height="250px"></dd>
+            </dl>
+        </div>
+
+        <div *ngSwitchCase=" 'rating' " >
+            <dl>
+                <dt> Rating</dt>
+                
+                <dd>
+                    <span class="bi bi-star text-success"></span>
+                    {{product.rating.rate}} [{{product.rating.count}}]
+                </dd>
+            </dl>
+        </div>
+        
+        <div *ngSwitchCase=" 'description' " >
+            <dl>
+                <dt>Description</dt>
+                <dd>{{product.description}}</dd>
+            </dl>
+        </div>
+
+        <div *ngSwitchDefault>
+            <dl>
+                <dt>Title</dt>
+                <dd>{{product.title}}</dd>
+            </dl>
+        </div>
+    </ng-container>
+</div>
