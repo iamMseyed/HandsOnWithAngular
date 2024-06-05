@@ -1,0 +1,33 @@
+<div class="container-fluid m-3 text-center">
+    <h2>NASA Mars Photos data via API usage</h2>
+
+    <button class="btn btn-info" (click)="GetMarsPhotos()">
+        Get Data
+    </button>
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>Photo id</th>
+                <th>Photo sol</th>
+                <th>Camera id</th>
+                <th>Camera Name</th>
+                <th>Camera rover id</th>
+                <th>Camera full name</th>
+                <th>Image</th>
+            </tr>
+        </thead>
+
+        <thead>
+            <tr *ngFor="let d of marsObject.photos">
+                <td>{{d.id}}</td>
+                <td>{{d.sol}}</td>
+                <td>{{d.camera.id}}</td>
+                <td>{{d.camera.name}}</td>
+                <td>{{d.camera.rover_id}}</td>
+                <td>{{d.camera.full_name}}</td>
+                <td> <img src="{{d.img_src}}" alt="loading ..." width="100px" height="50px" ></td>
+
+            </tr>
+        </thead>
+    </table>
+</div>
