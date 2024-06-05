@@ -1,0 +1,24 @@
+<div class="container-fluid mt-4 text-center">
+    <h1>Employee Data</h1>
+    <hr>
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>Emp Id</th>
+                <th>Emp Name</th>
+                <th>Emp Salary</th>
+            </tr>
+        </thead>
+        <tbody>
+      <!-- <tr *ngFor="let item of emp"> will get whole data from ts file -->
+            <tr *ngFor="let item of emp;trackBy:trackChanges"> <!--will get just updated data only!-->
+                <td>{{item.empId}}</td>
+                <td>{{item.empName}}</td>
+                <td>{{item.empSal}}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <button class="btn btn-primary" (click)="getUpdatedData()">Get Updated Data</button>
+
+</div>

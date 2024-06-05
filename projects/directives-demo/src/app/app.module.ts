@@ -10,6 +10,7 @@ import { NgForComponent } from './ng-for/ng-for.component';
 import { NasaAPIUsageComponent } from './nasa-api-usage/nasa-api-usage.component';
 import { CommonModule } from '@angular/common';
 import { NgForPropertiesComponent } from './ng-for-properties/ng-for-properties.component';
+import { NgForTrackByComponent } from './ng-for-track-by/ng-for-track-by.component';
 
 @NgModule({
   declarations: [
@@ -19,14 +20,15 @@ import { NgForPropertiesComponent } from './ng-for-properties/ng-for-properties.
     NgSwitchComponent,
     NgForComponent,
     NasaAPIUsageComponent,
-    NgForPropertiesComponent
+    NgForPropertiesComponent,
+    NgForTrackByComponent
   ],
   imports: [
     BrowserModule,
     FormsModule, //for ng things
   ],
   providers: [],
-  // bootstrap: [AppComponent,IfDemoComponent,NgIfElseComponent,NgSwitchComponent,NgForComponent,NasaAPIUsageComponent]
-  bootstrap:[NgForPropertiesComponent]
+  // bootstrap: [AppComponent,IfDemoComponent,NgIfElseComponent,NgSwitchComponent,NgForComponent,NasaAPIUsageComponent,NgForPropertiesComponent]
+  bootstrap:[NgForTrackByComponent]
 })
 export class AppModule { }
