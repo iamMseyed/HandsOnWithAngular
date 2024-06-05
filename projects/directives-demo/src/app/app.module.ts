@@ -24,10 +24,9 @@ import { NgForPropertiesComponent } from './ng-for-properties/ng-for-properties.
   imports: [
     BrowserModule,
     FormsModule, //for ng things
-    CommonModule //for slice to be used in ngfor
   ],
   providers: [],
-  // bootstrap: [AppComponent,IfDemoComponent,NgIfElseComponent,NgSwitchComponent,NgForComponent]
-  bootstrap:[NasaAPIUsageComponent]
+  // bootstrap: [AppComponent,IfDemoComponent,NgIfElseComponent,NgSwitchComponent,NgForComponent,NasaAPIUsageComponent]
+  bootstrap:[NgForPropertiesComponent]
 })
 export class AppModule { }

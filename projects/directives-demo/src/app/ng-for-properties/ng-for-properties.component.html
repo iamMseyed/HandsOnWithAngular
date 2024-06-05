@@ -1,1 +1,29 @@
-<p>ng-for-properties works!</p>
+<div class="container-fluid text-center m-2">
+    <div class="row">
+        <h1>Fake Store</h1>
+        <hr>
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>Preview</th>
+                    <th>Index</th>
+                    <th>First</th>
+                    <th>Last</th>
+                    <th>Even</th>
+                    <th>Odd</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr *ngFor="let item of products;let i = index;let f = first;let l=last;let e = even;let o = odd;" [class.odd]="o" [class.even]="e" >
+                    <td><img src="{{item.image}}" alt="loading.." width="100px" height="100px"></td>
+                    <td>{{i}}</td>
+                    <td>{{f}}</td>
+                    <td>{{l}}</td>
+                    <td>{{e}}</td>
+                    <td>{{o}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
