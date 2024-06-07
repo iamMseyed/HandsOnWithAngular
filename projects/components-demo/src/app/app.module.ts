@@ -40,7 +40,7 @@ import { FormDataComponent } from './components/form-data/form-data.component';
     FormsModule
   ],
   providers: [],
-  // bootstrap:[StudentComponent,EmployeeComponent,ISPComponent,MovieComponent,EvenBindingComponent,TwoWayBindingComponent] //bootstrap to initilize the component
-  bootstrap:[StudentGradeComponent]
+  // bootstrap:[StudentComponent,EmployeeComponent,ISPComponent,MovieComponent,StudentGradeComponent,TwoWayBindingComponent] //bootstrap to initilize the component
+  bootstrap:[EvenBindingComponent]
 })
 export class AppModule { }

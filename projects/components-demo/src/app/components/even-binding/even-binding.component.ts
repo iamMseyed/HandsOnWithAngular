@@ -6,12 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./even-binding.component.css']
 })
 export class EvenBindingComponent {
-  eID:Number=101;
-  eName:String="any Name";
-  eSal:Number=12345;
-  changeData(){
-    this.eID=104;
-    this.eName="Another Name";
-    this.eSal=4321;
+  eID:Number=10;
+  eName:String="hello";
+  eSal:Number=20;
+
+  updateData(){
+
+    this.eID=this.eID;
+    this.eName=this.eName
+    this.eSal=this.eSal
   }
 }

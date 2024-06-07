@@ -4,17 +4,40 @@
         <hr>
         <dl>
             <dt>Emp Id</dt> 
-            <dd>{{eID}}</dd>
+            <dd>[{{eID}}]</dd>
+            
+            <dd>
+                <label for="" class="form-label">
+                    <input  type="text" placeholder="enter new empId" [(ngModel)]="eID">
+                </label>
+                
+            </dd>
 
             <dt>Emp Name</dt>
-            <dd>{{eName}}</dd>
+            <dd>[{{eName}}]</dd>
+            <dd>
+                <label for="" class="form-label">
+                    <input  type="text" placeholder="enter new name" [(ngModel)]="eName" >
+                </label>
+                
+            </dd>
 
             <dt>Emp Salary</dt>
-            <dd>{{eSal}}</dd>
+            <dd>[{{eSal}}]</dd>
+            <dd>
+                <label for="" class="form-label">
+                    <input  type="text" placeholder="enter new salary" [(ngModel)]="eSal" >
+                </label>
+                
+            </dd>
         </dl>
     </div>
     <div>
-        <button (click)="changeData()" class="btn btn-success">Change Data</button>
+        <button (click)="updateData()" class="btn btn-success">Update Data</button>
+    </div>
+
+    <div>
+        <button class="mt-2 btn btn-primary">Event Binding example</button>
     </div>
 </div>
 
