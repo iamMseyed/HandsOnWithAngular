@@ -11,9 +11,20 @@ export class EvenBindingComponent {
   eSal:Number=20;
 
   updateData(){
-
     this.eID=this.eID;
     this.eName=this.eName
     this.eSal=this.eSal
+  }
+
+  public eventBinding(e:any){
+    document.write(
+      `
+      Button Id: ${e.target.id},
+      Button Name: ${e.target.name},
+      Classes : ${e.target.className},
+      X-Position: ${e.clientX},
+      ctrl key: ${e.ctrlKey}
+      `
+    )
   }
 }
