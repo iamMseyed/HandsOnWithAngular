@@ -1,0 +1,38 @@
+<div class="container-fluid mt-3">
+    <div>
+        <h2>Class Binding Example</h2>
+        <hr>
+
+        <!-- to follow mvc pattern, we need to have variables mentioned in ...component.ts file (controller)             -->
+        <div>
+            <h3 class=" text-decoration-underline">Via MVC pattern</h3>
+            <ul class="list-unstyled">
+                <li><input type="checkbox" name="" id="" [(ngModel)]="backgroud"> Change Background</li>
+                <li><input type="checkbox" name="" id="" [(ngModel)]="text"> Apply Text Style</li>
+                <li><input type="checkbox" name="" id="" [(ngModel)]="border"> Apply Border</li>
+            </ul>
+
+            <h3 [ngClass]=" 'bg-style' ">Hello there1, default bg applied</h3>
+            <h3 [ngClass]=" ['bg-style','text-style']">Hello there2, default bg, and text style applied</h3>
+            <h3 [ngClass]="{'bg-style':backgroud, 'text-style':text,'border-style':border}">Hello there3 (select checkbox above to apply styles)</h3>
+        </div>
+
+        <div>
+            <h3 class="text-decoration-underline pt-3">Via MVVM Pattern</h3>
+
+            <ul class="list-unstyled">
+                <li><input type="checkbox" ngModel #bg="ngModel"> Change Background </li>
+                    <!-- variable with # is local template reference variable-->
+                <li><input type="checkbox" ngModel #txt="ngModel"> Apply Text Style</li>
+                <li><input type="checkbox" ngModel #bdr="ngModel"> Apply Border</li>
+            </ul>
+
+            <h3 [ngClass]="'bg-style'"> Hello there1, default bg applied</h3> 
+            <h3 [ngClass]="['bg-style','text-style']"> Hello there2, default bg, and text style applied</h3>
+            <h3 class="border-empty" [ngClass]="{'bg-style':bg.value,'text-style':txt.value,'border-style':bdr.value}">
+                <!-- to access local template reference variable, use variablename.value -->
+                Hello there3 (select checkbox above to apply styles)</h3>
+        </div>
+
+    </div>
+</div>

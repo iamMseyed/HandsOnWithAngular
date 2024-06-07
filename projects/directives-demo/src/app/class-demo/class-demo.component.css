@@ -1,0 +1,12 @@
+.bg-style{
+    background-color: aquamarine;
+}
+
+.text-style{
+    color: red;
+    text-align: center;
+}
+
+.border-style{
+    border: 1px solid red!important;
+}
