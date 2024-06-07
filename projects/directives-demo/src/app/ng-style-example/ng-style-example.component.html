@@ -1,0 +1,54 @@
+<div class="container-fluid mt-3">
+    <h2>ngStyle Example</h2>
+    <hr>
+    <h3>Let's do some styling</h3>
+    <dl>
+        <dt>Select Background</dt>
+        <dd>
+            <select [(ngModel)] = "bgStyle" (change)="changeBG()">
+                <option  value="" selected>White</option> <!--default -->
+                <option value="red">Red</option>
+                <option value="black">Black</option>
+                <option value="green">Green</option>
+                <option value="grey">Grey</option>
+            </select>
+        </dd>
+    </dl>
+    
+    <dl>
+        <dt>Select Text Color</dt>
+        <dd>
+            <select [(ngModel)]= "textColor" (change)="changeTextColor()" >
+                <option  value="" selected>Black</option> <!--default -->
+                <option value="red">Red</option>
+                <option value="purple">Purple</option>
+                <option value="aqua">Cyan</option>
+            </select>
+        </dd>
+    </dl>
+
+    <dl>
+        <dt>Set custom Padding</dt>
+        <dd>
+            0px&nbsp;&nbsp;<input type="range" min="0" max="50" [(ngModel)]="padding" (click)="changePadding()">&nbsp;&nbsp;50px
+            <span> [{{padding}}px]</span>
+        </dd>
+    </dl>
+
+    <dl>
+        <dt>Set custom Font Size</dt>
+        <dd>
+            10px&nbsp;&nbsp;<input type="range" min="10" max="50" [(ngModel)]="fontSize" (change)="changeFont()">&nbsp;&nbsp;50px
+            <span> [{{fontSize}}px]</span>
+        </dd>
+    </dl>
+
+    <!-- <button class="btn btn-primary" (click)="applyAll()">Apply Styles</button> -->
+    <hr><hr>
+
+    <h3>Alter above values to apply styles below!</h3>
+    <div class="d-flex justify-content-center align-items-center" >
+        <p [ngStyle]="styleObj">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus aperiam hic corrupti animi odit? Ullam sint quod, officia tempora quo, quos excepturi ut molestiae provident modi animi consequatur in, facilis voluptatum ipsam atque inventore accusamus veritatis maiores impedit! Ratione, velit? Incidunt quisquam reiciendis, repellendus quibusdam voluptatem ex dignissimos dolor harum?</p>
+    </div>
+</div>
+

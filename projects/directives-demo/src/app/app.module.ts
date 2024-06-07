@@ -12,6 +12,7 @@ import { CommonModule } from '@angular/common';
 import { NgForPropertiesComponent } from './ng-for-properties/ng-for-properties.component';
 import { NgForTrackByComponent } from './ng-for-track-by/ng-for-track-by.component';
 import { ClassDemoComponent } from './class-demo/class-demo.component';
+import { NgStyleExampleComponent } from './ng-style-example/ng-style-example.component';
 
 @NgModule({
   declarations: [
@@ -23,14 +24,15 @@ import { ClassDemoComponent } from './class-demo/class-demo.component';
     NasaAPIUsageComponent,
     NgForPropertiesComponent,
     NgForTrackByComponent,
-    ClassDemoComponent
+    ClassDemoComponent,
+    NgStyleExampleComponent
   ],
   imports: [
     BrowserModule,
     FormsModule, //for ng things
   ],
   providers: [],
-  // bootstrap: [AppComponent,IfDemoComponent,NgIfElseComponent,NgSwitchComponent,NgForComponent,NasaAPIUsageComponent,NgForPropertiesComponent,NgForTrackByComponent]
-  bootstrap:[ClassDemoComponent]
+  // bootstrap: [AppComponent,IfDemoComponent,NgIfElseComponent,NgSwitchComponent,NgForComponent,NasaAPIUsageComponent,NgForPropertiesComponent,NgForTrackByComponent,ClassDemoComponent]
+  bootstrap:[NgStyleExampleComponent]
 })
 export class AppModule { }
