@@ -2,6 +2,11 @@
     <div>
         <h1 class="text-center">Event Binding</h1>
         <hr>
+    </div>
+        
+    <div class="row">
+       <div class="col-4">
+        <h2 class="text-decoration-underline">Two Binding (not event binding)</h2>
         <dl>
             <dt>Emp Id</dt> 
             <dd>[{{eID}}]</dd>
@@ -31,14 +36,69 @@
                 
             </dd>
         </dl>
-    </div>
-    <div>
-        <button (click)="updateData()" class="btn btn-success">Update Data</button>
-    </div>
+       </div>
 
-    <div>
-        <button class="mt-2 btn btn-primary" (click)="eventBinding($event)"  id="btnId" name="btnName">Event Binding example</button>
+       <div class="col-4">
+        <h2 class="text-decoration-underline">Event binding</h2>
+        <dl>
+            <dt>Emp Id</dt> 
+            <dd *ngIf="dataPresent">[{{eID1}}]</dd>
+            
+            <dd>
+                <label for="" class="form-label">
+                    <input  type="text" placeholder="enter new empId" #input1  [(ngModel)]="empty1">
+                </label>
+                
+            </dd>
+
+            <dt>Emp Name</dt>
+            <dd *ngIf="dataPresent">[{{eName1}}]</dd>
+            <dd>
+                <label for="" class="form-label">
+                    <input  type="text" placeholder="enter new name" #input2 [(ngModel)]="empty2" >
+                </label>
+                
+            </dd>
+
+            <dt>Emp Salary</dt>
+            <dd *ngIf="dataPresent">[{{eSal1}}]</dd>
+            <dd>
+                <label for="" class="form-label">
+                    <input  type="text" placeholder="enter new salary" #input3 [(ngModel)]="empty3">
+                </label>
+                
+            </dd>
+        </dl>
+        <div>
+            <button (click)="updateData(input1.value, input2.value, input3.value)" class="btn btn-success">Update Data</button>
+        </div>
+       </div>
+
+       <div class="col-4">
+        <div>
+            <button class="mt-4 btn btn-primary " (click)="eventBinding($event)"  id="eventButton" name="eventButton">
+                Event Binding method example
+            </button>
+        </div>
+    
+        <div *ngIf="eventBindingButtonClicked">
+            <dl>
+                <dt>Button Id</dt>
+                <dd>{{btnId}}</dd>
+    
+                <dt>Button Name</dt>
+                <dd>{{btnName}}</dd>
+    
+                <dt>Button Classes</dt>
+                <dd>{{btnClass}}</dd>
+    
+                <dt>Button X position</dt>
+                <dd>{{btn_X_Pos}}</dd>
+    
+                <dt>Button Clicked With ctrl key</dt>
+                <dd>{{ctrlBtn}}</dd>
+            </dl>
+        </div>
+       </div>
     </div>
 </div>
-
-
