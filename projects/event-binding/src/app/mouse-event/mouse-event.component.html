@@ -1,0 +1,15 @@
+<div class="container-fluid">
+   <div class="row m-3">
+    <div class="col-1"></div>
+        <div class="col-4">
+            <img (mouseover)="getImage('Ist')" class="d-flex" height="120px" width="120px"  src="assets/art1.png" alt="product image"><br>
+            <img (mouseover)="getImage('2nd')"class="d-flex" height="120px" width="120px"  src="assets/art2.png" alt="product image"><br>
+            <img (mouseover)="getImage('3rd')" class="d-flex" height="120px" width="120px"  src="assets/art4.png" alt="product image"><br>
+            <img (mouseover)="getImage('4th')" class="d-flex " height="120px" width="120px"  src="assets/art5.png" alt="product image">
+        </div>
+       <div class="col-6" >
+           <img style="padding-top: 4em" [src]="image" alt="image" height="500px" width="500px">
+       </div>
+       <div class="col-1"></div>
+    </div>
+</div>
