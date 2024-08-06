@@ -9,13 +9,20 @@ export class MouseEventComponent{
   public image:String='assets/art1.png';
 
 getImage(artId:String){
-  if(artId=='Ist')
-    this.image='assets/art1.png';
-  else if(artId=='2nd')
-    this.image='assets/art2.png';
-  else if(artId=='3rd')
-    this.image='assets/art3.png'; 
-  else
-  this.image='assets/art4.png'; 
+  switch(artId){
+    case 'Ist':
+      this.image='assets/art1.png';
+      break;
+    case '2nd':
+      this.image='assets/art2.png';
+      break;
+    
+    case '3rd':
+      this.image='assets/art3.png';
+      break;
+    
+    default:
+      this.image='assets/art4.png';
+  }
 }
 }
