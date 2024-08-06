@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./key-events.component.css']
 })
 export class KeyEventsComponent {
-  public users:any[]=
+  public new:any[]=
   [
     {Username:'un123'},
     {Username:'un234'},
@@ -14,7 +14,7 @@ export class KeyEventsComponent {
     {Username:'un456'},
     {Username:'un567'},
     {Username:'un678'}
-  ];
+  ]; //array of objects
 
 
   public userError:String='';
