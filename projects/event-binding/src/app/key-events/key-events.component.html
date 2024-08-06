@@ -1,13 +1,13 @@
-<div class="container-fluid">
-    <h2>Register User</h2>
+<div class="container-fluid mt-4">
+    <h2>Testing validation</h2>
 
     <dl>
         <dt>Username</dt>
         <dd> <input type="text" (keyup)="checkUser($event)"></dd>
-        <dd [ngClass]="{'text-danger':isValidUser,'text-success':true}">{{userError}}</dd>
+        <dd style="font-size: 12px!important;font-weight: bold;" [ngClass]="{'text-danger':isValidUser,'text-success':true}">{{userError}}</dd>
 
         <dt>Password</dt>
         <dd><input type="password" (keyup)="checkPassword($event)"></dd>
-        <dd [ngClass]="{'text-danger':isValidPass,'text-success':true}">{{passError}}</dd>
+        <dd style="font-size: 12px!important; font-weight: bold;" [ngClass]="{'text-danger':isValidPass,'text-success':true}">{{passError}}</dd>
     </dl>
 </div>

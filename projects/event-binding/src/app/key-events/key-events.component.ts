@@ -25,7 +25,7 @@ export class KeyEventsComponent {
   checkUser(e:any){
     let user= e.target.value;
     // alert (user.length)
-    if(user.length>3 && user.length<8){
+    if(user.length>3 && user.length<=8){
       for(var u of this.users){
         if(u.Username==user){
           this.userError='Username already taken!';
@@ -45,7 +45,6 @@ export class KeyEventsComponent {
     }
   }
 
-  
   checkPassword(e:any){
     let password = e.target.value; //user input password
 
