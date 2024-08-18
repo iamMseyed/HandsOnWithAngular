@@ -1,0 +1,96 @@
+<div class="container ">
+
+    <h2 class="mt-3">Dealing with pipes</h2>
+    <ol class="list-group">
+        <li  class="list-group-item">
+            Original Name: {{name}}
+        </li>
+
+        <li class="list-group-item">
+            Name in upper case: {{name | uppercase}}
+        </li>
+
+        <li class="list-group-item">
+            Name in lower case: {{name | lowercase}}    
+        </li>
+
+        <li class="list-group-item">
+            Name in Title case: {{name | titlecase}}
+        </li>
+
+        <li class="list-group-item">
+            Original price: {{price}}
+        </li>
+
+        <li class="list-group-item">
+            Trimmed price : {{price | number:'1.2-2'}}  
+            <!-- 
+                A minimum of 1 digit will be shown before decimal point
+                It will show at least 2 digits after decimal point
+                But not more than 2 digits
+            -->
+        </li>
+
+        <li class="list-group-item">
+            Price with value: {{price | currency:'INR'}}
+        </li>
+
+        <li class="list-group-item">
+            Date is : {{anyDate2 | date}}
+        </li>
+
+        <li class="list-group-item">
+            Json object without using pipes: {{jsObject}} 
+        </li>
+<!-- 
+json pipe: is used to format JavaScript objects or arrays into a JSON-like string for display purposes in templates.        
+-->
+        <li class="list-group-item">
+            Js object via pipes {{jsObject | json}}
+        </li>
+
+        <li class="list-group-item">
+            Property/key of js object: {{jsObject.city}}
+        </li>
+
+        <li class="list-group-item">
+            Property/key of js arrays data: {{jsArray | json  }}
+        </li>
+
+        <li class="list-group-item">
+            Property/key sliced value: {{jsObject.city | slice:8:-2 }}
+        </li>
+    </ol>
+
+    <table class="table table-hover mb-3">
+        <thead>
+            <tr>
+                <th>Product Name</th>
+                <th>Destination address</th>
+                <th>Status</th>
+                <th>Unit    </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let product of products">
+                <td>{{product.Name}}</td>
+                <td>{{product.shippedTo}}</td>
+                <td>
+                    {{product.shippedTo | i18nSelect:productStatus}}
+                </td>
+
+                <td>
+                    {{ product.item| 
+                        i18nPlural: {
+                          '=1':'1',
+                          'other': '#'
+                        }
+                    }}
+                      <!-- should be 'other' only  for different values-->
+                </td>
+            </tr>
+        </tbody> 
+    </table>
+
+
+</div>
