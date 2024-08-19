@@ -25,7 +25,7 @@ export class KeyEventsComponent {
   checkUser(e:any){
     let user= e.target.value;
     // alert (user.length)
-   const combinedPattern = /^(?!.*\s)[\w-]+$/.test(user) //no spaces and 
+   const combinedPattern = /^(?!.*\s)[\w-]+$/.test(user) //Only allowed letters, number, -, and _
     if(!combinedPattern){
       this.userError='Only allowed letters, number, -, and _';
       this.isValidUser=true;
