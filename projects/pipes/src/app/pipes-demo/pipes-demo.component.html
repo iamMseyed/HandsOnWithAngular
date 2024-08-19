@@ -25,9 +25,9 @@
         <li class="list-group-item">
             Trimmed price : {{price | number:'1.2-2'}}  
             <!-- 
-                A minimum of 1 digit will be shown before decimal point
-                It will show at least 2 digits after decimal point
-                But not more than 2 digits
+                -> A minimum of 1 digit will be shown before decimal point
+                -> It will show at least 2 digits after decimal point
+                -> But not more than 2 digits
             -->
         </li>
 
@@ -42,9 +42,10 @@
         <li class="list-group-item">
             Json object without using pipes: {{jsObject}} 
         </li>
-<!-- 
-json pipe: is used to format JavaScript objects or arrays into a JSON-like string for display purposes in templates.        
--->
+        <!-- 
+             json pipe: is used to format JavaScript objects or arrays into a JSON-like 
+             string for display purposes in templates.        
+        -->
         <li class="list-group-item">
             Js object via pipes {{jsObject | json}}
         </li>
@@ -86,11 +87,12 @@ json pipe: is used to format JavaScript objects or arrays into a JSON-like strin
                           'other': '#'
                         }
                     }}
-                      <!-- should be 'other' only  for different values-->
+                      <!-- 
+                       should be 'other' only  for different values
+                       Here # is whatever value is passed. Say for =1 is 1 
+                       but for others will be # which is that value itself-->
                 </td>
             </tr>
         </tbody> 
     </table>
-
-
 </div>
