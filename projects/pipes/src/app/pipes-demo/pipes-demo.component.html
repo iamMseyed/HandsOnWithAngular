@@ -40,6 +40,16 @@
         </li>
 
         <li class="list-group-item">
+            Value {{percent}} in percentage is {{ percent | percent}}
+        </li>
+
+        <li class="list-group-item">
+            <div *ngFor=" let num of numberArray">
+                value is {{num}},
+                 in percent is {{num | percent}}
+            </div>
+        </li>
+        <li class="list-group-item">
             Json object without using pipes: {{jsObject}} 
         </li>
         <!-- 

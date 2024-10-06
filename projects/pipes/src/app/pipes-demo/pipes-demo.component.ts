@@ -11,9 +11,11 @@ export class PipesDemoComponent {
   public price:number = 123.4567;
   public anyDate:Date = new Date("2025 feb 28"); 
   public anyDate2:Date = new Date("2025 feb 31"); //march 3 
-
   // you can mention any date but within range. Say data ranges from 1-31
 
+  public numberArray=[1,20.4,0.3,4.6,5.5];
+
+  public percent:number = 0.5;
   public jsObject = {
     name: "John Doe",
     occupation: "Developer",
