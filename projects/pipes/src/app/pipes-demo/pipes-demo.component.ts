@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { Data } from '@angular/router';
 
 @Component({
   selector: 'app-pipes-demo',
@@ -39,4 +38,3 @@ export class PipesDemoComponent {
 
   public count = 1;
 }
-
