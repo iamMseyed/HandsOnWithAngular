@@ -1,0 +1,18 @@
+Directives:
+===========
+    -Structural:
+    ------------
+        Used to add/remove HTML content dynamically.
+        e.g *ngIf, *ngFor, *ngSwitch
+
+    -Behaviroual:
+    -------------
+        Used to add/remove CSS classes and styles dynamically
+        e.g [ngStyle] and [ngClass]
+
+    -Component:
+    ----------
+        When the above Directives didn't meet the requirements, we can have custom directives and
+        implement the custom logic accordingly.
+        e.g
+        A custom directive is a class which is decorated with @Decorative();
