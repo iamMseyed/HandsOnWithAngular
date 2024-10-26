@@ -45,3 +45,16 @@ To create a service, we use "ng g s serviceName"
 -- root: refers to current application location
 -- platform: refers to current module level
 -- any: referes to workspace level
+
+Component communication:
+
+Angular app is created with the help of components
+    -We use 3 mechanism to acheive communication between compnents:
+        -- @Input() : 
+                     When transfering data from parent to child
+                     -- Import {input} from '@angular/cli';
+                     -- @Input() public msgFromParent:string = 'message';
+                     -- @Input() is a marker/directive, used to mark any propery that is expecting a data from the parent compnent
+
+        -- @Output()
+        -- Services
