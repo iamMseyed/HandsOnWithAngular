@@ -16,3 +16,32 @@ Directives:
         implement the custom logic accordingly.
         e.g
         A custom directive is a class which is decorated with @Decorative();
+
+Services:
+
+- A Service is a resuable class, which will be created with the helpf of @injectable() decortor
+- It contains pre-defined business logic, which can be used acress the application whenever it requires.
+- Advantages: Reusability, Security, Testability, Maintaince.
+
+_ Service is a set of factories.
+_Factory is a set of functions.
+_Angular services use "Singleton" design mechanism, which means the object of the serice is created in very first request and can be
+ used across the application
+_Angular services use Dependency Injection:
+    -> Providers : responsable for locating the values/functions from the memory  
+    -> Injectors : responsable for injecting the values/functions used into the component
+
+-- Built in services:
+    - HttpClient
+    - Routing
+    - Security
+
+To create a service, we use "ng g s serviceName"
+
+@Injectaable({
+    provideIn: 'root'
+})
+
+-- root: refers to current application location
+-- platform: refers to current module level
+-- any: referes to workspace level
