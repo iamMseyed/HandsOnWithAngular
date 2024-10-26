@@ -13,6 +13,8 @@ import { NgForPropertiesComponent } from './ng-for-properties/ng-for-properties.
 import { NgForTrackByComponent } from './ng-for-track-by/ng-for-track-by.component';
 import { ClassDemoComponent } from './class-demo/class-demo.component';
 import { NgStyleExampleComponent } from './ng-style-example/ng-style-example.component';
+import { CustomDirectiveComponent } from './custom-directive/custom-directive.component';
+import { CustomDDirective } from './custom-d.directive';
 
 @NgModule({
   declarations: [
@@ -25,14 +27,19 @@ import { NgStyleExampleComponent } from './ng-style-example/ng-style-example.com
     NgForPropertiesComponent,
     NgForTrackByComponent,
     ClassDemoComponent,
-    NgStyleExampleComponent
+    NgStyleExampleComponent,
+    CustomDirectiveComponent,
+    CustomDDirective
   ],
   imports: [
     BrowserModule,
     FormsModule, //for ng things
   ],
   providers: [],
-  // bootstrap: [AppComponent,IfDemoComponent,NgIfElseComponent,NgSwitchComponent,NgForComponent,NasaAPIUsageComponent,NgForPropertiesComponent,NgForTrackByComponent,ClassDemoComponent]
-  bootstrap:[NgStyleExampleComponent]
+  /* bootstrap: 
+  //[AppComponent,IfDemoComponent,NgIfElseComponent,NgSwitchComponent,
+  //NgForComponent,NasaAPIUsageComponent,NgForPropertiesComponent,
+  NgForTrackByComponent,ClassDemoComponent,NgStyleExampleComponent]*/
+  bootstrap:[CustomDirectiveComponent]
 })
 export class AppModule { }
