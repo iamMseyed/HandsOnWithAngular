@@ -55,6 +55,7 @@ Angular app is created with the help of components
                      -- Import {input} from '@angular/cli';
                      -- @Input() public msgFromParent:string = 'message';
                      -- @Input() is a marker/directive, used to mark any propery that is expecting a data from the parent compnent
+                     -- Once we have the data from parent, we are sending to child by using property binding '[]';
 
         -- @Output()
         -- Services

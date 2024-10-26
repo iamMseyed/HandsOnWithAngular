@@ -1,0 +1,12 @@
+<div class="container-fluid p-4 mt-2 bg-dark text-white"
+style="height: 500px;">
+    <h2>Parent Container</h2>
+
+    <button class="mb-2 btn btn-primary" (click)="sendClick()">Call child</button>
+    
+    <app-child-component 
+    [msgFromParent]="msg" [msgFromParent1]="stuDet"> 
+    <!--Calling other component,msg is from parent ....ts file -->
+
+    </app-child-component>
+</div> 
