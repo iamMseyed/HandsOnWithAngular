@@ -2,15 +2,15 @@
 style="height: 300px;">
 <h3> Child Container</h3>
 <p> {{msgFromParent}}</p>
+
+<button class="mb-2 btn btn-primary" (click)="msgToParentClick()">Call Parent </button>
 <hr>
 <table>
-    
     <tr *ngFor="let std of msgFromParent1">
         
         <td> {{std.name}}</td> 
         &nbsp; &nbsp; &nbsp;
         <td> {{std.enrolment}} </td>
-        
     </tr>
 </table>
 

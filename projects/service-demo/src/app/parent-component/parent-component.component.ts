@@ -19,4 +19,9 @@ export class ParentComponentComponent {
       {name:'Name6',enrolment: 'abc128'}
     ]
   }
+
+  public msgFromChild:string='';
+  public GetMessageFromChild(e:any){
+    this.msgFromChild=e;
+  }
 } 

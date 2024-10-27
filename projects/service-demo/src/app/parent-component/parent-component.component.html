@@ -3,10 +3,11 @@ style="height: 500px;">
     <h2>Parent Container</h2>
 
     <button class="mb-2 btn btn-primary" (click)="sendClick()">Call child</button>
-    
-    <app-child-component 
+    <p>{{msgFromChild}}</p>
+    <app-child-component  (msgToParent)="GetMessageFromChild($event)"
     [msgFromParent]="msg" [msgFromParent1]="stuDet"> 
     <!--Calling other component,msg is from parent ....ts file -->
 
     </app-child-component>
+
 </div> 
